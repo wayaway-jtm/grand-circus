@@ -1,0 +1,21 @@
+#chessboard {
+    width: 640px;
+    height: 640px;
+    border: 1px solid #000;
+}
+
+.row {
+    height: 80px;
+    -webkit-transition: ease-in-out ;
+    transition: ease-in-out ;
+}
+
+.column {
+    width: 80px;
+    height: 80px;
+    float: left;
+    border: 1px solid #000;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
