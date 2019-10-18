@@ -2,6 +2,7 @@
     width: 640px;
     height: 640px;
     border: 1px solid #000;
+    margin: 0 auto;
 }
 
 .row {
@@ -10,6 +11,13 @@
     transition: ease-in-out ;
 }
 
+.row:nth-child(even) .column:nth-child(odd) {
+    background-color: black;
+}
+
+.row:nth-child(odd) .column:nth-child(even) {
+    background-color: black;
+}
 .column {
     width: 80px;
     height: 80px;
@@ -17,5 +25,23 @@
     border: 1px solid #000;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+}
+.checker.black {
+    background: gray;
+    border: 1px solid gray;
+}
+.checker {
+    border: 1px solid red;
+    height: 60px;
+    width: 60px;
+    background: red;
+    border-radius: 50%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-box-shadow: 0 0 6px 1px black;
+            box-shadow: 0 0 6px 1px black;
 }
 

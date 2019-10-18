@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "Cantarell-Regular"; src: url("cantarell/Cantarell-Regular.ttf");
+}
+#outer-div {
+    padding: 15px;
+    border: 1px solid #000;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    background: #000;
+    opacity: .3;
+    -webkit-transition: opacity 3s;
+    transition: opacity 3s;
+}
+#outer-div:hover {
+    opacity: 1;
+}
+#outer-div p {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: #f0f0f0;
+    font-family: 'Cantarell-Regular', cursive;
+
+}
+
+img {
+    width: 200px;
+}
+
+body {
+    height: 200vh;
+    padding-top: 80px;
+}
+
+header {
+    background-color: navy;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index:1;
+}
