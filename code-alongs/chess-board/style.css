@@ -1,21 +1,23 @@
 #chessboard {
-    width: 640px;
-    height: 640px;
     border: 1px solid #000;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    height: 90vw;
 }
 
 .row {
-    height: 80px;
+    justify-content: center;
+    display: flex;
+    flex: 1;
 }
 
 .column {
-    width: 80px;
-    height: 80px;
-    float: left;
     border: 1px solid #000;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    flex: 1;
 }
 
 .row:nth-child(odd) .column:nth-child(even) {
@@ -27,10 +29,10 @@
 }
 
 .checker {
+    height: 90%;
+    width: 90%;
     border: 1px solid red;
     background-color: red;
-    height: 60px;
-    width: 60px;
     border-radius: 50%;
     position: relative;
     top: 50%;
@@ -43,5 +45,65 @@
 
 .checker.black {
     border: 1px solid #fefefe;
-    background-color: #fefefe;
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    -webkit-animation: rainbow 18s ease infinite;
+    -z-animation: rainbow 18s ease infinite;
+    -o-animation: rainbow 18s ease infinite;
+    animation: rainbow 18s ease infinite;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@-webkit-keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@-moz-keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@-o-keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
 }
