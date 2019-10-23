@@ -1,0 +1,65 @@
+/* Goofy borders around everything to help us see the layout. */
+
+* {
+    border: 2px solid cornflowerblue;
+    margin: 5px;
+    padding: 3px;
+}
+
+
+/* body takes up full viewport and extends all the way to the edges. */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+}
+
+article {
+    flex: 3;
+}
+
+section {
+    flex: 1;
+}
+
+header>nav{
+    display: flex;
+    border: 0;
+}
+
+header>nav>.title {
+    flex: 1;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header>nav>a {
+    margin: 12px;
+}
+
+footer {
+    display: flex;
+}
+
+footer .copyright {
+    flex: 1;
+}
+
+footer a {
+    margin: 12px;
+}
+
+

@@ -1,0 +1,53 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f9fafc;
+}
+
+main {
+    padding: 15px;
+}
+
+p {
+    color: #69696a;
+}
+
+nav>ul {
+    padding: 0;
+}
+
+nav li a:link,
+nav li a:hover,
+nav li a:visited {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    color: #69696a;
+}
+
+nav li {
+    list-style-type: none;
+    color: #69696a;
+    margin-top: 8px;
+}
+
+nav li.active {
+    color: #000;
+}
+
+.btn,
+a.btn {
+    color: #fff;
+    background-color: #000;
+    padding: 12px 2px;
+    text-align: center;
+    border-radius: 50px;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+p {
+    border-left: 2px solid #000;
+    padding-left: 15px;
+}
