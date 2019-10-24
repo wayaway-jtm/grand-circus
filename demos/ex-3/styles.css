@@ -67,6 +67,7 @@ header>nav>a {
 
 footer {
     display: none;
+    padding: 25px;
 }
 
 footer .copyright {
