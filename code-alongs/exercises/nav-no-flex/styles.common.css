@@ -7,10 +7,16 @@ header {
     background: #551A8B;
     color: #fff;
     padding: 15px;
+    font-size: 1.2rem;
 }
 
 header>nav a {
     color: white;
     padding: 8px;
     text-decoration: none;
+}
+
+main {
+    padding: 15px;
+    font-size: 1rem;
 }

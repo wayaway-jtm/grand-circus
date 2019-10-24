@@ -1,12 +1,5 @@
 /* Goofy borders around everything to help us see the layout. */
 
-* {
-    border: 2px solid cornflowerblue;
-    margin: 5px;
-    padding: 3px;
-}
-
-
 /* body takes up full viewport and extends all the way to the edges. */
 
 html,
@@ -14,6 +7,11 @@ body {
     margin: 0;
     padding: 0;
     border: none;
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -24,6 +22,7 @@ body {
 
 main {
     display: flex;
+    flex-direction: column;
     flex-grow: 1;
 }
 
@@ -31,13 +30,29 @@ article {
     flex: 3;
 }
 
-section {
-    flex: 1;
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 25px;
 }
 
-header>nav{
+main {
+    padding: 15px;
+}
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    flex: 1;
+    background-color: #f8f8f8;
+}
+
+header>nav {
     display: flex;
     border: 0;
+    flex-direction: column;
 }
 
 header>nav>.title {
@@ -51,7 +66,7 @@ header>nav>a {
 }
 
 footer {
-    display: flex;
+    display: none;
 }
 
 footer .copyright {
@@ -60,6 +75,20 @@ footer .copyright {
 
 footer a {
     margin: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+    main {
+        flex-direction: row;
+    }
+
+    footer {
+        display: flex;
+    }
+
+    header>nav {
+        flex-direction: row;
+    }
 }
 
 

@@ -1,9 +1,39 @@
 header>nav {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
 }
 
 header>nav>span.title {
     flex-grow: 1;
+    padding: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+    header>nav>span.title {
+        order: 2;
+        text-align: right;
+    }
+
+    header>nav {
+        flex-direction: row;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+
+    main {
+        padding-top: 100px;
+    }
+
+    html {
+        font-size: 22px;
+    }
 }
