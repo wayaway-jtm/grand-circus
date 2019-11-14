@@ -6,7 +6,7 @@ If you want to
  * store data in a key-value pair (properties)
  * use functions to change the state of properties (methods)
 
-**use objects**.
+then you should **use objects**.
 
 If you want to re-use objects to have the same base set of methods and properties (think of an agreement of how things work), use **classes**.
 
@@ -45,5 +45,5 @@ class Car {
 const car = new Car("Toyota", "Camry", "Red");
 ```
 
-This `this` variable is a special property that refers to the object itself.
+The `this` variable is a special property that refers to the object itself.
 
