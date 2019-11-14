@@ -1,26 +1,27 @@
 function Car(name, color) {
     let speed = 0;
 
-    const vroomVroom = function() {
+    function vroomVroom() {
         speed++;
     }
 
-    const getSpeed = function () {
+    function getSpeed() {
         return speed;
     }
 
-    const aaahhh = function () {
+    function aaahhh() {
         speed = 0;
     }
 
-    const getType = function() {
+    function getType() {
         console.log(`This is a ${color} ${name}`)
     }
 
-    return {getSpeed, vroomVroom, aaahhh, getType};
+    return this;
+   // return {getSpeed, vroomVroom, aaahhh, getType};
 }
 
-let mustang = Car('Mustang', 'Red');
+let mustang = new Car('Mustang', 'Red');
 console.log(mustang.getSpeed());
 mustang.vroomVroom();
 console.log(mustang.getSpeed());

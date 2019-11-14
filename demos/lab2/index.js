@@ -1,3 +1,5 @@
+"use strict"
+
 /**
  * Get random integer between two values, inclusive
  *
@@ -60,4 +62,8 @@ if (yn && 'yes' === yn.trim().toLowerCase()) {
     }
 } else {
     alert('Whatever');
+}
+
+const increaseDeaths = () => {
+    grantDeaths++;
 }
