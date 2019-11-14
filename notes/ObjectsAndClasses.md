@@ -3,8 +3,9 @@
 If you want to reuse lines of code with or without variable input, use **functions**.
 
 If you want to
-    - store data in a key-value pair (properties)
-    - use functions to change the state of properties (methods)
+ * store data in a key-value pair (properties)
+ * use functions to change the state of properties (methods)
+
 **use objects**.
 
 If you want to re-use objects to have the same base set of methods and properties (think of an agreement of how things work), use **classes**.
