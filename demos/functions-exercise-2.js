@@ -1,3 +1,4 @@
+"use strict";
 {
     let forward = true; // true/false
     let position = 0;
@@ -33,3 +34,5 @@
     moveForward(2); // 3
     printLocation(); // 3
 }
+
+console.log(position); //undefined
