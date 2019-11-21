@@ -10,6 +10,9 @@ class Store {
         this.inventory.push(product);
     }
 
+    removeProduct = (product) => {
+
+    }
 }
 
 class Product {
@@ -57,7 +60,6 @@ class MountainDew extends Product {
 }
 
 let dell = new Laptop();
-
 console.log(dell instanceof Laptop);
 console.log(dell instanceof Computer);
 console.log(dell instanceof Product);
