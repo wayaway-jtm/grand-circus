@@ -19,30 +19,22 @@ class Store {
     removeProductByIndex = productNumber => this.inventory.splice(productNumber, 1);
 
     removeProductByName = productName => {
-        this.getProductByName(productName).forEach( (product, index) => {
+        this.getProductByName(productName).forEach((product, index) => {
             this.removeProductByIndex(product.productNumber);
         })
     };
 
     getProductByName = productName => {
-        return this.inventory.filter( (product, index) => {
+        return this.inventory.filter((product, index) => {
             product.productNumber = index;
             return productName === product.name;
         })
     }
 
-    getProductsByType = type => this.inventory.filter( item => item instanceof type);
+    getProductsByType = type => this.inventory.filter(item => item instanceof type);
 
     // Get an array of all of the computer objects
-    // getComputers = _ => this.getProductsByType(Computer);
-
-    getComputers() {
-        console.log('START OF FILTER');
-        return this.inventory.filter( (item) => {
-            console.log(item, item instanceof Computer);
-            return item instanceof Computer;
-        })
-    }
+    getComputers = _ => this.getProductsByType(Computer);
 
     // Get an array of all of the laptop objects
     getLaptops = _ => this.getProductsByType(Laptop);
@@ -60,7 +52,7 @@ class Product {
     }
 
     getPrice() {
-        return this.price;
+        return '$ ' + this.price;
     }
 
     getType() {
@@ -126,3 +118,6 @@ console.log(store.inventory);
 console.log(store.getProductByName('Spiderman'));
 
 // get the price of a specific product
+console.log(store.getProductByName('Spiderman')[0].getPrice());
+console.log(store.getProductByName('Chromebook')[0].getPrice());
+
