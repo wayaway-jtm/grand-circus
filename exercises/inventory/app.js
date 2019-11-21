@@ -87,6 +87,9 @@ class MountainDew extends Product {
 }
 
 let dell = new Laptop("Dell", 200);
+
+console.log(dell.getPrice());
+
 // console.log(dell instanceof Laptop);
 // console.log(dell instanceof Computer);
 // console.log(dell instanceof Product);
