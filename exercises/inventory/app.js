@@ -1,17 +1,7 @@
 class Store {
-    constructor() {
+    constructor(inventory) {
         // Array of Objects
-        this.inventory = [
-            new Computer('ASUS', 350),
-            new Computer('Dell', 250),
-            new Laptop('Macbook Pro', 250000),
-            new Laptop('Chromebook', 27.12),
-            new Sticker('Spiderman', 12),
-            new Sticker('Spiderman', 12),
-            new Sticker('Spiderman', 12),
-            new HDMI('Cheap Chinese Knockoff', 2),
-            new HDMI('Official Stuff', 70),
-        ];
+        this.inventory = inventory;
     }
 
     addProduct = product => this.inventory.push(product)
@@ -94,8 +84,20 @@ console.log(dell.getPrice());
 // console.log(dell instanceof Computer);
 // console.log(dell instanceof Product);
 
-let store = new Store();
-let store2 = new Store();
+let store = new Store([
+    new Computer('ASUS', 350),
+    new Computer('Dell', 250),
+    new Laptop('Macbook Pro', 250000),
+    new Laptop('Chromebook', 27.12),
+    new Sticker('Spiderman', 12),
+    new Sticker('Spiderman', 12),
+    new Sticker('Spiderman', 12),
+    new HDMI('Cheap Chinese Knockoff', 2),
+    new HDMI('Official Stuff', 70),
+]);
+
+
+let store2 = new Store([new Computer('ASUS', 250)]);
 
 let computer = {
     name: 'my computer'
