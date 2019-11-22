@@ -1,21 +1,30 @@
-function abc() {
-    console.log('what');
+class LinkedList {
+    constructor() {
+        this.head = null;
+        this.size = 0;
+    }
+
+    push(node) {
+        if ( !this.head ) {
+            this.head = node;
+        }
+
+        this.size++;
+    }
+
+
 }
 
-let map = new Map();
+class Node() {
+    constructor() {
+        this.next = null;
+    }
 
-map.set(true, 'This is true');
-map.set(abc, 'This is something else');
-map.set(abc, 'This is something else 123');
+    setNext(node) {
+        this.next = node;
+    }
+}
 
-map.set('abc', 'This is something else');
+let l = new LinkedList();
+l.push(new Node());
 
-console.log(map.get(abc));
-
-console.log(map.has(abc));
-abc();
-
-map.clear();
-console.log(map.size);
-
-const qwerty = new Set();
