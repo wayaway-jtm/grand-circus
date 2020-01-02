@@ -144,6 +144,11 @@
             element.appendChild(section);
         }
 
+        /**
+         * Return whether a color is light or dark
+         *
+         * @param {*} color
+         */
         lightOrDark(color) {
 
             // Variables for red, green, blue values
@@ -188,6 +193,11 @@
             }
         }
 
+        /**
+         * Get a randomly generated color
+         *
+         * return hex code
+         */
         getRandomColor() {
             const randomNumber = Math.floor(Math.random()*16777215);
             let color = '#'+(  randomNumber ).toString(16);
@@ -205,6 +215,11 @@
             };
         }
 
+        /**
+         * Refresh generated elements in the DOM
+         *
+         * This can be run any time there's a change in data
+         */
         updateDom() {
             this.loadCategories();
             this.updateBudget();
@@ -212,6 +227,9 @@
             this.updatePurchases();
         }
 
+        /**
+         * Add ability to delete purchase by the class
+         */
         addDeleteButtons() {
             const buttons = document.querySelectorAll('.delete-puchase');
 
@@ -225,6 +243,9 @@
             });
         }
 
+        /**
+         * Get number of days left in the month
+         */
         getDaysLeftInMonth() {
             const date = new Date();
             const time = new Date(date.getTime());
@@ -235,6 +256,9 @@
             return days;
         }
 
+        /**
+         * Refresh list of transactions inside of each category column
+         */
         updatePurchases() {
             this.purchases.forEach((purchase, index) => {
                 let category = purchase.category;
@@ -245,7 +269,6 @@
 
                 const purchases = document.querySelector('#purchases-' + category + ' ul');
 
-                console.log(purchase);
                 const $purchase = document.createElement('li');
                 $purchase.innerHTML = `<span class="cost">${purchase.name} <strong>${this.convertCurrency(purchase.price)}</strong></span>
                 <button class="delete-puchase" data-index="${index}">X</button>`;
