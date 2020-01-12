@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'first-angular-app';
+  hideTitle = true;
+
+  returnTitle() {
+    return this.title;
+  }
+
+  toggleTitle() {
+    this.hideTitle = !this.hideTitle;
+  }
 }
