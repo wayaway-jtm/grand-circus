@@ -42,7 +42,7 @@
 
         addFormSubmit() {
             document.querySelector('#update-budget').addEventListener('submit', (e) => {
-                e.preventDefault();
+               e.preventDefault();
 
                 const $input = document.querySelector('#budget');
 
@@ -57,6 +57,20 @@
         }
 
         loadCategories() {
+
+            const chore = document.querySelector('#box5 .done');
+
+            for(const element of chore) {
+                chore.addEventListener('dblclick', () => {
+                    const chore = document.querySelector('#box5 .done');
+
+                    for(element of chore) {
+                        element.remove();
+                    }
+                })
+            }
+
+
             const element = document.getElementById('purchase-categories');
             element.innerHTML = '';
 

@@ -20,8 +20,21 @@ body {
     margin: 0;
     padding: 1rem 0;
     transition: background-color .6s ease-in-out;
+    background-color: #fff;
 }
 
 * {
     box-sizing: border-box;
+}
+
+body.lightcoral {
+    background-color: lightcoral;
+}
+
+button.switch {
+    background-color: lightcoral;
+}
+
+body.lightcoral button.switch {
+    background-color: #fff;
 }

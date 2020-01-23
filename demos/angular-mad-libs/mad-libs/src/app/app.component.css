@@ -1,0 +1,13 @@
+h1, p {
+    font-family: 'PT Sans', sans-serif;
+}
+
+p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+main {
+    max-width: 595px;
+    margin: auto;
+}

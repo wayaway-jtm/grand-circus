@@ -7,19 +7,27 @@
 <button (click)="toggleTitle($event)"> Toggle Title </button>
 <input [(ngModel)]="name" />
 
-<p>
-    Today I went to the zoo. I saw a(n)
-    <mad-lib-form placeholder="(adjective)"></mad-lib-form>
-    <mad-lib-form placeholder="(adjective)"></mad-lib-form>
-    <mad-lib-form placeholder="(noun)"></mad-lib-form> jumping up and down in its tree. He
-    <mad-lib-form placeholder="(verb, past test)"></mad-lib-form>
-    <mad-lib-form placeholder="(adverb)"></mad-lib-form> through the large tunnel that led to its
-    <mad-lib-form placeholder="(adjective)"></mad-lib-form>
-    <mad-lib-form placeholder="(noun)"></mad-lib-form>. I got some peanuts and passed them through the cage to a gigantic gray
-    <mad-lib-form placeholder="(noun)"></mad-lib-form> towering above my head. Feeding that animal made me hungry. I went to get a
-    <mad-lib-form placeholder="(adjective)"></mad-lib-form> scoop of ice cream. It filled my stomach. Afterwards I had to
-    <mad-lib-form placeholder="(verb)"></mad-lib-form>
-    <mad-lib-form placeholder="(adverb)"></mad-lib-form> to catch our bus. When I got home I
-    <mad-lib-form placeholder="(verb, past tense)"></mad-lib-form> my mom for a
-    <mad-lib-form placeholder="(adjective)"></mad-lib-form> day at the zoo.
-</p>
+<div>
+    <input [(ngModel)]="percentage" placeholder="percentage" type="number" />
+
+    <input [(ngModel)]="counter" placeholder="counter" type="number" />
+    <input (focus)="setHeight()" (blur)="resetHeight()" [ngStyle]="{'height': height, 'font-size': height, color: 'blue' }" [placeholder]="height" />
+
+    <p>{{percentage | percent}}</p>
+
+    {{ birthday.toString() === today.toString() ? "Happy birthday" : "It's not your birthday"}}
+    <progress [value]="percentage" max="1 "></progress>
+</div>
+
+<div>
+    Todays date is <strong> {{ today | date  | lowercase }}. </strong> Today I went to the zoo. I saw a(n)
+    <button (click)=" goToTomorrow() ">Go to tomorrow</button> Todos
+    <div>
+        <todo *ngFor="let todo of todos; let i = index;" (deleted)="deleteItem($event, i)" [completed]="todo.completed" [task]="todo.task"></todo>
+    </div>
+
+    People
+    <p *ngFor="let person of people; trackBy: trackByPeople ">
+        {{person.firstName}} {{person.lastName}}
+    </p>
+</div>

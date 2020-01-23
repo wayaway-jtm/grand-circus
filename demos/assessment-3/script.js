@@ -1,11 +1,14 @@
 "use strict"
 
 function toggleColor() {
-    if (document.body.style.backgroundColor === 'lightcoral') {
-        document.body.style.backgroundColor = 'white'
-    } else {
-        document.body.style.backgroundColor = 'lightcoral'
-    }
+    // if (document.body.style.backgroundColor === 'lightcoral') {
+    //     document.body.style.backgroundColor = 'white';
+    //     document.querySelector('.switch').style.backgroundColor = 'lightcoral';
+    // } else {
+    //     document.body.style.backgroundColor = 'lightcoral';
+    //     document.querySelector('.switch').style.backgroundColor = 'white';
+    // }
+    document.body.classList.toggle('lightcoral');
 }
 
 
@@ -25,7 +28,7 @@ const addEmptyBox = _ => {
     box.classList.add('empty');
     box.classList.add('box');
     box.title = "I'm an invisible box!";
-   //  box.innerText = boxNumber++;
+    //  box.innerText = boxNumber++;
     box.addEventListener('click', _ => box.remove());
     document.querySelector('.box-container').appendChild(box);
 }
@@ -34,9 +37,9 @@ const generateCalendar = _ => {
     const month = new Date().getMonth();
     const year = new Date().getFullYear();
 
-    const daysInMonth = new Date(year, month, 0).getDate(); 
-    const dayOfWeek = new Date(year, month, 1).getDay(); 
-   
+    const daysInMonth = new Date(year, month, 0).getDate();
+    const dayOfWeek = new Date(year, month, 1).getDay();
+
     reset();
 
     for (let i = 0; i < dayOfWeek; i++) {
@@ -44,8 +47,8 @@ const generateCalendar = _ => {
     }
 
     boxNumber = 1;
-    for(boxNumber; boxNumber <= daysInMonth; ) {
-         addBox()
+    for (boxNumber; boxNumber <= daysInMonth;) {
+        addBox()
     }
 }
 
@@ -56,5 +59,3 @@ function reset() {
 
 document.querySelector('#add-box').addEventListener('click', addBox);
 document.querySelector('#generate-calendar').addEventListener('click', generateCalendar);
-
-
