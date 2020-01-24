@@ -1,3 +1,8 @@
-form {
+/* form {
     display: inline;
+} */
+
+span {
+    font-size: 1.1rem;
+    font-weight: bolder;
 }

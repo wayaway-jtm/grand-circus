@@ -14,12 +14,11 @@ export class MadLibFormComponent implements OnInit {
     this.editMode = true;
   }
 
-  ngOnInit() {
-  }
-
   toggleEditMode() {
     this.editMode = !this.editMode;
-    console.log(this.editMode);
+  }
+
+  ngOnInit() {
   }
 
 }

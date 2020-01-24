@@ -1,20 +1,19 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-first-angular-app',
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'The Jungle';
+  title = 'first-angular-app';
   hideTitle = true;
 
   returnTitle() {
     return this.title;
   }
 
-  toggleTitle($event) {
-    console.log($event)
+  toggleTitle() {
     this.hideTitle = !this.hideTitle;
   }
 }
