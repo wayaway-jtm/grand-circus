@@ -2,7 +2,7 @@
 interface ISauce {
     // define a property type
     name : string;
-    spiceLevel : number;
+    spiceLevel? : number;
     awesome : boolean;
     meltYourEyes(name: string) : boolean; // definiting a function type 
 }
@@ -32,7 +32,7 @@ const sauces : ISauce[] = [
 ];
 
                         // parameters in function       // return type
-function getSauceByName(s : ISauce[], name : string) : ISauce {
+function getSauceByName(s : ISauce[], name : string) : ISauce|undefined {
     // do my stuff
     return s[0];
 }
