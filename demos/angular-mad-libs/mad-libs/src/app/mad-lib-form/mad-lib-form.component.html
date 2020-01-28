@@ -1,0 +1,5 @@
+<span *ngIf="!editMode"> {{madLibPhrase}} </span>
+
+<form *ngIf="editMode" (ngSubmit)="onSubmit()">
+    <input [placeholder]="placeholder" name="madLibPhrase" [(ngModel)]="madLibPhrase" /> <button>Save</button>
+</form>

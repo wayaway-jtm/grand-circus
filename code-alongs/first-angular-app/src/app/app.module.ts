@@ -5,11 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { MadLibFormComponent } from './mad-lib-form/mad-lib-form.component';
+import { TodoComponent } from './todo/todo.component';
+import { SwearWordFilterPipe } from './swear-word-filter.pipe';
+import { FilterSearchPipe } from './filter-search.pipe';
+// import { LoggerService } from 'src/logger.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MadLibFormComponent
+    MadLibFormComponent,
+    TodoComponent,
+    SwearWordFilterPipe,
+    FilterSearchPipe
   ],
   imports: [
     BrowserModule,

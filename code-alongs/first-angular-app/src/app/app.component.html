@@ -5,31 +5,27 @@
 
 <input [(ngModel)]="name" /> -->
 
-<p>
-  Today, my fabulous camp group went to a (an)
-  <mad-lib-form placeholder="(adjective)"></mad-lib-form> amusement park. It was a
-  fun park with lots of cool <mad-lib-form placeholder="(plural noun)"></mad-lib-form>
-  and enjoyable play structures. When we got there, my
-  kind counselor shouted loudly, "Everybody off the
-  <mad-lib-form placeholder="(noun)"></mad-lib-form>." We all pushed out in a terrible
-  hurry. My counselor handed out yellow tickets, and
-  we scurried in. I was so excited! I couldn't figure out
-  what exciting thing to do first. I saw a scary roller
-  coaster I really liked so, I <mad-lib-form placeholder="(adverb)"></mad-lib-form> ran
-  over to get in the long line that had about
-  <mad-lib-form placeholder="(number)"></mad-lib-form> people in it. When I finally
-  got on the roller coaster I was <mad-lib-form placeholder="(past tense verb)"></mad-lib-form>. In fact I was so
-  nervous
-  my
-  two knees
-  were knocking together. This was the <mad-lib-form placeholder="(-est adjective)"></mad-lib-form> ride I had ever been
-  on!
-  In about two
-  minutes I heard the crank and grinding of the gears.
-  That’s when the ride began! When I got to the bottom,
-  I was a little <mad-lib-form placeholder="(past tense verb)"></mad-lib-form> but I
-  was proud of myself. The rest of the day went
-  <mad-lib-form placeholder="(adverb)"></mad-lib-form>. It was a(n) <mad-lib-form placeholder="(adjective)">
-  </mad-lib-form>
-  day at the fun park.
-</p>
+<div>
+    <input [(ngModel)]="percentage" placeholder="percentage" type="number" />
+
+    <input [(ngModel)]="counter" placeholder="counter" type="number" />
+    <input (focus)="setHeight()" (blur)="resetHeight()" [ngStyle]="{'height': height, 'font-size': height, color: 'blue' }" [placeholder]="height" />
+
+    <p>{{percentage | percent}}</p>
+
+    {{ birthday.toString() === today.toString() ? "Happy birthday" : "It's not your birthday"}}
+    <progress [value]="percentage" max="1 "></progress>
+</div>
+
+<div>
+    Todays date is <strong> {{ today | date  | lowercase }}. </strong> Today I went to the zoo. I saw a(n)
+    <button (click)=" goToTomorrow() ">Go to tomorrow</button> Todos
+    <div>
+        <todo *ngFor="let todo of todos; let i = index;" (deleted)="deleteItem($event, i)" [completed]="todo.completed" [task]="todo.task"></todo>
+    </div>
+
+    People
+    <p *ngFor="let person of people; trackBy: trackByPeople ">
+        {{person.firstName}} {{person.lastName}}
+    </p>
+</div>

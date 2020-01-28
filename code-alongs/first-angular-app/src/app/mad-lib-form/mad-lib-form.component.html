@@ -1,5 +1,8 @@
-<span [hidden]="editMode" class="madLibAnswer"> {{madLibText}} </span>
-<form (ngSubmit)="toggleEditMode()" style="display: inline;" *ngIf="editMode">
-  <input [(ngModel)]="madLibText" name="madLibText" [placeholder]="placeholder"/>
-  <button>Save</button>
-</form>
+<span [hidden]="editMode"> {{madLibText }} </span>
+
+<span [hidden]="!editMode">
+    <form (ngSubmit)="toggleEditMode()">
+        <input [(ngModel)]="madLibText" name="madLibText" [placeholder]="placeholder" />
+        <button> Save </button>
+    </form>
+</span>
